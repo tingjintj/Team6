@@ -29,6 +29,7 @@ The development of AutoWorthWizard involved several key stages:
 - **Data Storage:** Cleaned data were stored in an R data format (`data_final.RData`), ensuring efficient access and manipulation within the R environment.
 - **Machine Learning Model:** A machine learning model was trained using the cleaned data. This model is crucial for predicting car prices based on their characteristics. (`MODEL_WITH_COMMENTS.R`)
 - **Model Storage:** The trained model was stored as an RDS file (`final_model.rds`) to facilitate easy loading and prediction in the Shiny application. This file can be accessed [final_model](https://urledu-my.sharepoint.com/:u:/g/personal/ting_jin_esade_edu/EcY7v9JgSdJBmc6ELRSuZO4B_23UdRMagnCirThU98QYmw?e=0sih6Z).
+- **Source Code:** The code for the AutoWorthWizard Shiny application can be found in the `app.R` file within our GitHub repository.
 
 ## Design and User Interface
 
