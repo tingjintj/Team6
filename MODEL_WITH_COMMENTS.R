@@ -25,21 +25,18 @@ url <- "https://raw.githubusercontent.com/tingjintj/Team6/main/data_final.RData"
 temp_file <- tempfile()
 download.file(url, temp_file, mode = "wb")
 load(temp_file) # For .RData
-# df <- readRDS(temp_file) # For .RDS
 unlink(temp_file)
-
-# MODEL -----------------------------------------------------------------------
 
 ## Training and Testing sets -------------------------------------------------
 
 set.seed(123)
-data_split <- initial_split(df, prop = 0.80)
+data_split <- initial_split(data_final, prop = 0.80)
 train_data <- training(data_split)
 test_data  <- testing(data_split)
 
 # Adjust factor levels for both 'make' and 'model' in training and testing data
-all_make_levels <- levels(df$make)
-all_model_levels <- levels(df$model)
+all_make_levels <- levels(data_final$make)
+all_model_levels <- levels(data_final$model)
 
 train_data <- train_data %>%
   mutate(
@@ -112,7 +109,8 @@ rf_spec <- rand_forest(
 final_model <- rf_spec %>% 
   fit(price ~ ., data = train_data)
 
-saveRDS(final_model, "/Users/tingjin/Downloads/final_model.rds")
+## Save the final model ------------------------------------------------------
+saveRDS(final_model, "/Users/tingjin/Downloads/final_model.rds") #adjust the path to save the model
 
 ## Evaluate on test data ------------------------------------------------------
 test_results <- predict(final_model, test_data) %>%
@@ -125,4 +123,3 @@ test_results %>% filter(.metric == "mae")
 # Stop and clear parallel processing
 stopCluster(cl)
 registerDoSEQ()
-
