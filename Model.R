@@ -106,14 +106,14 @@ rf_spec <- rand_forest(
   set_engine("ranger")
 
 ## Fitting the model on training data ----------------------------------------
-final_model <- rf_spec %>% 
+model_fit <- rf_spec %>% 
   fit(price ~ ., data = train_data)
 
 ## Save the final model ------------------------------------------------------
-saveRDS(final_model, "/Users/tingjin/Downloads/final_model.rds") #adjust the path to save the model
+saveRDS(model_fit, "/home/ubuntu/model_fit.rds") #adjust the path to save the model locally
 
 ## Evaluate on test data ------------------------------------------------------
-test_results <- predict(final_model, test_data) %>%
+test_results <- predict(model_fit, test_data) %>%
   bind_cols(test_data) %>%
   metrics(truth = price, estimate = .pred)
 
