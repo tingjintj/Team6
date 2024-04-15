@@ -28,7 +28,7 @@ The development of AutoWorthWizard involved several key stages:
 - **Data Cleaning:** Initial raw data were thoroughly cleaned to ensure accuracy and reliability. This involved handling missing values, correcting anomalies, and standardizing formats.(`shiny_app_cars_data_preprocessing.R`)
 - **Data Storage:** Cleaned data were stored in an R data format (`data_final.RData`), ensuring efficient access and manipulation within the R environment.
 - **Machine Learning Model:** A machine learning model was trained using the cleaned data. This model is crucial for predicting car prices based on their characteristics. (`Model.R`)
-- **Model Storage:** The trained model was stored as an RDS file (`model_fit.rds`) to facilitate easy loading and prediction in the Shiny application. This file can be accessed [final_model](https://urledu-my.sharepoint.com/:u:/g/personal/ting_jin_esade_edu/EcY7v9JgSdJBmc6ELRSuZO4B_23UdRMagnCirThU98QYmw?e=aNqyoV).
+- **Model Storage:** The trained model was stored as an RDS file (`model_fit.rds`) to facilitate easy loading and prediction in the Shiny application. This file can be accessed [model_fit](https://urledu-my.sharepoint.com/:u:/g/personal/ting_jin_esade_edu/Efhl4_KO5SlPug2wpj5Zm4cBc9Hzb4YhvruwNrzNMnNTIA?e=GvSWg4).
 - **Source Code:** The code for the AutoWorthWizard Shiny application can be found in the `app.R` file within our GitHub repository.
 
 ## Design and User Interface
@@ -46,4 +46,4 @@ To ensure a consistent and visually appealing user interface, we developed a spe
 
 AutoWorthWizard is hosted on an AWS EC2 instance. When needed, we will turn the EC2 instance on and provide the public IP address. Currently, the application can be accessed via:
 
-[http://15.237.43.238:3838/](http://15.237.43.238:3838/)
+[http://13.36.236.74:3838/](http://13.36.236.74:3838/)
