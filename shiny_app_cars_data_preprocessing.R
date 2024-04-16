@@ -4,7 +4,7 @@ library(data.table)
 library(janitor)
 
 # Import Data
-df <- read.csv("/Users/joelkoemen/Desktop/R Final Project/autoscout24-germany-dataset.csv")
+df <- read.csv("https://raw.githubusercontent.com/tingjintj/Team6/main/autoscout24-germany-dataset.csv")
 
 # Drop missing values
 df <- df %>% drop_na()
@@ -43,7 +43,7 @@ data_final <- df %>%
     offerType = factor(offerType, levels = unique(df$offerType))
   )
 
-save(data_final, file = '/Users/joelkoemen/Desktop/R Final Project/data_final.RData')
+save(data_final, file = '/home/ubuntu/data_final.RData') #adjust the path to save the model locally
 
 
 
