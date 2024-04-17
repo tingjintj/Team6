@@ -46,4 +46,4 @@ To ensure a consistent and visually appealing user interface, we developed a spe
 
 AutoWorthWizard is hosted on an AWS EC2 instance. When needed, we will turn the EC2 instance on and provide the public IP address. Currently, the application can be accessed via:
 
-[http://13.36.236.74:3838/](http://13.36.236.74:3838/)
+[http://13.38.115.24:3838](http://13.38.115.24:3838)
